@@ -1,3 +1,8 @@
+# Project specific readme
+
+## Add Migrations
+`dotnet ef migrations add Initial --project Person.Infrastracture.Data.EfcoreSqlite`
+
 # Assecor Assessment Test (DE)
 
 ## Zielsetzung
@@ -22,7 +27,7 @@ Einige Beispieldatensätze finden sich in `sample-input.csv`. Die Zahlen der ers
 
 Das Ausgabeformat der Daten ist als `application/json` festgelegt. Die Schnittstelle soll folgende Endpunkte anbieten:
 
-**GET** /persons
+**GET** /people
 ```json
 [{
 "id" : 1,
@@ -37,7 +42,7 @@ Das Ausgabeformat der Daten ist als `application/json` festgelegt. Die Schnittst
 }]
 ```
 
-**GET** /persons/{id}
+**GET** /people/{id}
 
 *Hinweis*: als **ID** kann hier die Zeilennummer verwendet werden.
 ```json
@@ -51,7 +56,7 @@ Das Ausgabeformat der Daten ist als `application/json` festgelegt. Die Schnittst
 }
 ```
 
-**GET** /persons/color/{color}
+**GET** /people/color/{color}
 ```json
 [{
 "id" : 1,
@@ -88,7 +93,7 @@ Denk an deine zukünftigen Kollegen, und mach es ihnen nicht zu einfach, indem d
 
 You are to implement a RESTful web interface. The choice of framework and stack is yours between .NET (C#) or Java. It has to fulfull the following criteria:
 
-* You should be able to manage persons and their favourite colour using the interface
+* You should be able to manage people and their favourite colour using the interface
 * The application should be able to read the date from the CSV source, without modifying the source file
 * You can identify people with a common favourite colour using the interface
 
@@ -106,7 +111,7 @@ A set of sample data is contained within `sample-input.csv`. The number in the f
 
 the return content type is `application/json`. The interface should offer the following endpoints:
 
-**GET** /persons
+**GET** /people
 ```json
 [{
 "id" : 1,
@@ -121,7 +126,7 @@ the return content type is `application/json`. The interface should offer the fo
 }]
 ```
 
-**GET** /persons/{id}
+**GET** /people/{id}
 
 *HINT*: use the csv line number as your **ID**.
 ```json
@@ -135,7 +140,7 @@ the return content type is `application/json`. The interface should offer the fo
 }
 ```
 
-**GET** /persons/color/{color}
+**GET** /people/color/{color}
 ```json
 [{
 "id" : 1,
@@ -161,7 +166,7 @@ the return content type is `application/json`. The interface should offer the fo
 
 ## bonus points are awarded for the following
 * implement the project with MSBuild in mind for CI using TFS/DevOps when using .NET, or as a Maven/Gradle project in Java
-* Implement an additional **POST** /persons to add new people to the dataset
+* Implement an additional **POST** /people to add new people to the dataset
 * Add a secondary data source (e.g. database via EF or JPA)
 
 Think about your potential future colleagues, and do not make it too easy for them by posting your solution publicly. Thank you!

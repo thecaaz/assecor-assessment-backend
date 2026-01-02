@@ -2,7 +2,7 @@
 
 ## Manual tests
 
-Start the programm and open the swagger ui at: `https://localhost:5001/swagger/index.html`
+Start the programm and open the swagger ui at: `https://localhost:7017/swagger/index.html`
 
 ## Add Migrations
 `dotnet ef migrations add <migration> --project Person.Infrastracture.Data.EfcoreSqlite`

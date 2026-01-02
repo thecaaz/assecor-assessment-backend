@@ -1,7 +1,11 @@
 # Project specific readme
 
+## Manual tests
+
+Start the programm and open the swagger ui at: `https://localhost:5001/swagger/index.html`
+
 ## Add Migrations
-`dotnet ef migrations add Initial --project Person.Infrastracture.Data.EfcoreSqlite`
+`dotnet ef migrations add <migration> --project Person.Infrastracture.Data.EfcoreSqlite`
 
 # Assecor Assessment Test (DE)
 

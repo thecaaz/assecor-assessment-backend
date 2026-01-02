@@ -1,6 +1,5 @@
 ﻿using CoopHub.Infrastructure.Data.EntityFramework;
 using Person.Core.Application;
-using Person.Infrastracture.Data.EfcoreSqlite;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +9,10 @@ builder.Services.AddExceptionHandler<PersonExceptionHandler>();
 builder.Services.AddOpenApi();
 
 builder.Services.AddPersonApplication();
-//builder.Services.AddCsvPersonPersistence();
-builder.Services.AddSqlitePersonPersistence();
+
+// Comment out one of the two to switch between data storage type
+builder.Services.AddCsvPersonPersistence();
+//builder.Services.AddSqlitePersonPersistence();
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
